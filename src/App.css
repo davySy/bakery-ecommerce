@@ -1,4 +1,4 @@
-.App {
+/* .App {
   text-align: center;
 }
 
@@ -35,4 +35,42 @@
   to {
     transform: rotate(360deg);
   }
+} */
+
+.App {
+  text-align: center;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #fff8f0;
+  min-height: 100vh;
+  padding: 2rem;
+}
+
+.App-header {
+  margin-top: 5rem;
+}
+
+h1 {
+  color: #d2691e;
+  font-size: 2.5rem;
+}
+
+p {
+  font-size: 1.2rem;
+  color: #333;
+}
+
+.order-button {
+  margin-top: 1.5rem;
+  padding: 0.75rem 1.5rem;
+  background-color: #ff7f50;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.order-button:hover {
+  background-color: #ff5722;
 }
