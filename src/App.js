@@ -1,16 +1,36 @@
 import React from 'react';
+import { Routes, Route, useNavigate } from 'react-router-dom'; // ⬅️ Import Router hooks
 import './App.css';
+import Browse from './Browse';  // ⬅️ Import the new Browse component
 
-function App() {
+function Home() {
+  const navigate = useNavigate();
+
   return (
     <div className="App">
       <header className="App-header">
-        {/* <h1>Mimi's Bakery & Floral Shops</h1> */}
         <h1>Mimi's Bakery and Floral Shop</h1>
-        <p>Fresh baked goods and beautilful flowers</p>
+        <p>Fresh baked goods and beautiful flowers</p>
         <button className="order-button">Order Now</button>
+        <br />
+        <button
+          className="order-button"
+          onClick={() => navigate('/browse')}
+          style={{ marginTop: '1rem' }}
+        >
+          Browse
+        </button>
       </header>
     </div>
+  );
+}
+
+function App() {
+  return (
+    <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="/browse" element={<Browse />} />
+    </Routes>
   );
 }
 
